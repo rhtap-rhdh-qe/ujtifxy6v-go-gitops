@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: ujtifxy6v-go-gitops
+  description: This is GitOps manifest for ujtifxy6v-go   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-name: ujtifxy6v-go
+    janus-idp.io/tekton: ujtifxy6v-go 
+    backstage.io/kubernetes-id: ujtifxy6v-go 
+    backstage.io/techdocs-ref: dir:. 
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:ujtifxy6v-go
